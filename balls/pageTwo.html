@@ -1,5 +1,12 @@
 <html>
     <style>
+        * {
+            margin: 10px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS';
+            text-align: left;
+        }
          body {
             background: #bdb19f;
         }
@@ -22,8 +29,15 @@
             font-size: 25px;
         }
     </style>
-        <h1> Welcome,</h1><h2>user (this is supposed to say ur username but i gave up guys) </h2>
+        <h1 id="welcomeMessage"> Welcome,</h1>
     <div class = wrapper>
-        <h3> hi idk what to put i guess i like dogs (i couldve made this page look better but idk what to put umm)</h3>
-    </div>
+        </div>
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        const user = params.get("username");
+
+        if (user) {
+            document.getElementById("welcomeMessage").textContent = `Welcome, ${user}`;
+        }
+        </script>
 </html>
