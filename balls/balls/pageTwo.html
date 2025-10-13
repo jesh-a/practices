@@ -1,3 +1,16 @@
 <html>
-    <h1> test </h1>
+    <style>
+         body {
+            background: #bdb19f;
+        }
+    </style>
+        <h1> Welcome,   </h1>
+         <script>
+        window.onload = function() {
+            const storedValue = localStorage.getItem('savedInput');
+            if (storedValue) {
+                document.getElementById('outputDisplay').textContent = storedValue;
+            }
+        };
+    </script>
 </html>
